@@ -1,0 +1,32 @@
+#Define a Python function remdup(l) that takes a nonempty list of integers l and removes all duplicates in l, keeping only the first occurrence of each number.
+def remdup(l):
+  a=[]
+  for i in l:
+    if i not in a:
+      a.append(i)
+  return(a)
+
+#Write a Python function sumsquare(l) that takes a nonempty list of integers and returns a list [odd,even], where odd is the sum of squares all the odd numbers in l and even is the sum of squares of all the even numbers in l.
+def sumsquare(l):
+  a=[]
+  esum=0
+  osum=0
+  for num in l:
+    if num%2==0:
+      esum=esum+(num*num)
+    else:
+      osum=osum+(num*num)
+  a.append(osum)
+  a.append(esum)
+  return(a)
+
+#Write a Python function transpose(m) that takes as input a two dimensional matrix m and returns the transpose of m. The argument m should remain undisturbed by the function.  
+
+def transpose(m):
+  a=[]
+  for i in range(len(m[0])):
+    l=[]
+    for j in range(len(m)):
+      l.append(m[j][i])
+    a.append(l)
+  return(a)
